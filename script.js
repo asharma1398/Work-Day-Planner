@@ -1,6 +1,10 @@
 // day and time displayed at the top of the page 
 var currentDay = $("#currentDay");
 var dayOfWeek = moment().format('dddd');
-var dateAndTime = moment().format('MMMM Do YYYY');
-currentDay.text(dayOfWeek + " - ");
-currentDay.append(dateAndTime);
+// every second the clock updates 
+function runSeconds() {
+    currentDay.html(moment().format('D MMMM, YYYY h:mm:ss'));
+    currentDay.prepend(dayOfWeek + " - ");
+}
+setInterval(runSeconds, 1000);
+
