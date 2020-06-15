@@ -8,3 +8,28 @@ function runSeconds() {
 }
 setInterval(runSeconds, 1000);
 
+// push to local storage 
+$(".saveBtn").on("click", function() {
+    var sib = $(this).siblings("textarea").attr("id") // id of textarea (hour)
+    var toDo = $(this).siblings("textarea").val().trim(); // value user typed
+    localStorage.setItem(sib, toDo) // store (id,val) pair to local storage
+});
+
+// retrieve from local storage 
+function runRetrieveStorage() {
+    
+    // looping through work day hours 
+    for (var i = 9; i < 18; i++) {
+        // content contains val for each work day time 
+        var content = localStorage.getItem(i.toString());
+        // setting val to textarea id 
+        $("#" + i.toString()).val(content)
+    }
+}
+runRetrieveStorage();
+
+// clear the page of content
+$(".clear").on("click", function () {
+    localStorage.clear(); // clear items on page
+    location.reload(); // reload page
+})

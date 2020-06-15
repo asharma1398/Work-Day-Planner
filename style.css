@@ -8,7 +8,7 @@ textarea{
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #000;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -75,4 +75,9 @@ textarea{
 
 .fa-save {
   font-size: 25px;
+}
+
+.clear {
+  padding: 10px 22px;
+  border-radius: 12px;
 }
