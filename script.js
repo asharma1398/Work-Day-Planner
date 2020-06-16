@@ -33,3 +33,25 @@ $(".clear").on("click", function () {
     localStorage.clear(); // clear items on page
     location.reload(); // reload page
 })
+
+// deciphering between past, present and future time 
+var hourNow = moment().format('h'); // current hour
+var hourNowInt = parseInt(hourNow); // hour as int
+var description = document.getElementsByClassName("description col-sm-8");
+
+// comparing the current hour to the number id associated with each time block
+for (var i = 0; i < description.length; i++) {
+    
+    // present time gets color red 
+    if (hourNowInt == parseInt(description[i].getAttribute("id"))) {
+        $("#" + description[i].getAttribute("id")).addClass("present");
+    } 
+    // future time gets color green
+    else if (hourNowInt < parseInt(description[i].getAttribute("id"))) {
+        $("#" + description[i].getAttribute("id")).addClass("future");
+    }
+    // past time gets color gray 
+    else {
+        $("#" + description[i].getAttribute("id")).addClass("past");
+    }
+}
