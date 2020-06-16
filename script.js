@@ -42,11 +42,11 @@ var description = document.getElementsByClassName("description col-sm-8");
 // comparing the current hour to the number id associated with each time block
 for (var i = 0; i < description.length; i++) {
     
-    // present time gets color red 
+    // present time gets color green 
     if (hourNowInt == parseInt(description[i].getAttribute("id"))) {
         $("#" + description[i].getAttribute("id")).addClass("present");
     } 
-    // future time gets color green
+    // future time gets color blue
     else if (hourNowInt < parseInt(description[i].getAttribute("id"))) {
         $("#" + description[i].getAttribute("id")).addClass("future");
     }
