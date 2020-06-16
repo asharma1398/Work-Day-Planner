@@ -35,7 +35,7 @@ $(".clear").on("click", function () {
 })
 
 // deciphering between past, present and future time 
-var hourNow = moment().format('h'); // current hour
+var hourNow = moment().format('H'); // current hour
 var hourNowInt = parseInt(hourNow); // hour as int
 var description = document.getElementsByClassName("description col-sm-8");
 
