@@ -23,4 +23,4 @@ This project features dynamically updated HTML and CSS, powered by jQuery and Ja
 
 ### Preview 
 ***
-![]()
+![planner_demo](planner_demo.gif)
