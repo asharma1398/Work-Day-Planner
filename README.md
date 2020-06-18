@@ -1,4 +1,4 @@
-# Work-Day-Planner
+# Work Day Planner
 
 [Deployed Application](https://asharma1398.github.io/Work-Day-Planner/)
 <br>
