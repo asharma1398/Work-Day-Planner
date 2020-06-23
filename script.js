@@ -37,7 +37,7 @@ $(".clear").on("click", function () {
 // deciphering between past, present and future time 
 var hourNow = moment().format('H'); // current hour
 var hourNowInt = parseInt(hourNow); // hour as int
-var description = document.getElementsByClassName("description col-sm-8");
+var description = document.getElementsByClassName("description col-8");
 
 // comparing the current hour to the number id associated with each time block
 for (var i = 0; i < description.length; i++) {
